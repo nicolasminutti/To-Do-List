@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lista de Tareas</title>
+	<meta name="description" content="JAA">
+	<meta name="keywords" content="HTML5, CSS, Javascript">
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.css">
+	<script src="/assets/bootstrap/js/bootstrap.js"></script>
+	<script src="/assets/bootstrap/js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+	<header>
+		<nav class="navbar fixed-top navbar-dark bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand">Junior Achievement Argentina</a>
+				<form class="d-flex" role="search">
+					<input class="form-control me-2" type="search" id="search" placeholder="Buscar Tarea" aria-label="search">
+				</form>
+			</div>
+		</nav>
+	</header>
+	<section>
+		<div class="container-fluid mt-5">
+			<div class="row">
+				<div class="col-4">
+					<p class="fs-1 text-center">Lista de Tareas</p>
+					<p class="fs-5 text-center fw-medium">Tareas Pendientes: <span id="remainingTasks"
+							class="badge rounded-pill text-bg-info"></span></p>
+					<form id="taskForm">
+						<div class="form-floating mb-3">
+							<input type="text" class="form-control" id="task" placeholder="Tarea" maxlength="30"
+								autocomplete="false" required>
+							<label for="task">Tarea</label>
+							<p class="fs-6 text-end text-wrap" id="charNumTask">&nbsp;</p>
+						</div>
+						<div class="form-floating mb-3">
+							<textarea class="form-control" placeholder="Descripción" id="description" maxlength="100"
+								autocomplete="false" style="resize: none; height: 100px;" required></textarea>
+							<label class="text-wrap" for="description">Descripción de la Tarea</label>
+							<p class="fs-6 text-end text-wrap" id="charNumDescription">&nbsp;</p>
+						</div>
+						<fieldset class="row mb-2">
+							<legend for="priority" class="col-form-label col-sm-2 pt-0">Prioridad</legend>
+							<div class="col-sm-10 text-center">
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="priority" id="inlineRadio1"
+										value="Baja" checked>
+									<label class="form-check-label" for="inlineRadio1">Baja</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="priority" id="inlineRadio2"
+										value="Media">
+									<label class="form-check-label" for="inlineRadio2">Media</label>
+								</div>
+								<div class="form-check form-check-inline">
+									<input class="form-check-input" type="radio" name="priority" id="inlineRadio3"
+										value="Alta">
+									<label class="form-check-label" for="inlineRadio3">Alta</label>
+								</div>
+							</div>
+						</fieldset>
+						<button type="submit" class="btn btn-primary" id="btnSubmit">Agregar Tarea</button>
+					</form>
+				</div>
+				<div class="col-8 mt-5" id="route">
+					<div class="row row-cols-1 row-cols-md-3 g-4" id="taskList">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<footer class="footer fixed-bottom mt-5 py-1 bg-dark">
+		<div class="container-fluid text-center">
+			<section class="mb-4">
+				<a class="btn btn-link" href="https://www.buymeacoffee.com/nicolasminutti"><img src="/assets/bootstrap/icons/buymeacoffee-svgrepo-com.svg" alt="Buy Me A Coffee" style="width:42px;height:42px;"></img></a>
+				<a class="btn btn-link" href="https://www.linkedin.com/in/nicol%C3%A1s-minutti/"><img src="/assets/bootstrap/icons/linkedin.svg" alt="Linkedin" style="width:42px;height:42px;"></img></a>
+				<a class="btn btn-link" href="https://github.com/nicolasminutti"><img src="/assets/bootstrap/icons/github.svg" alt="GitHub" style="width:42px;height:42px;"></img></a>
+				<a class="btn btn-link" href="mailto:correo@ejemplo.com"><img src="/assets/bootstrap/icons/envelope-at.svg" alt="GMail" style="width:42px;height:42px;"></img></a>
+			</section>
+			<span class="text-light"><img src="/assets/bootstrap/icons/c-circle.svg" alt="Copyright"></img>&nbsp;2023 Nicolás Minutti</span>
+		</div>
+	</footer>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
