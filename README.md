@@ -1,5 +1,5 @@
-# proyectotienda
-Proyecto Final para  Junior Achievement Argentina - YPP 2023 Santa Fe - 3era Cohorte Aula Abierta
+# TODO List
+Proyecto Final para Junior Achievement Argentina - YPP 2023 Santa Fe - 3era Cohorte Aula Abierta
 
 ## Comenzando 🚀
 
